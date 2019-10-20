@@ -8,13 +8,15 @@
                 <div class="card-header">Kategori Berita</div>
 
                 <div class="card-body">
+                	<a href="{!! route('kategori_berita.create') !!}" class="btn btn-primary">Tambah Data</a>
                    <table border="1">
-		<tr>
+		<tr bgcolor="aqua">
 			<td><center> ID </center></td>
 			<td><center> Nama </center></td>
 			<td><center> Users Id </center></td>
 			<td><center>Create</center></td>
 			<td><center>Update</center></td>
+			<td><center>Aksi</center></td>
 		</tr>
 
 		@foreach($listKategoriBerita as $item)
@@ -25,6 +27,17 @@
 			<td>{!! $item->users_id !!}</td> 
 			<td>{!! $item->created_at->format('d/m/Y H:i:s') !!}</td>
 			<td>{!! $item->updated_at->format('d/m/Y H:i:s') !!}</td>
+			<td>
+			<a href="{!! route('kategori_berita.show',[$item->id]) !!}" class="btn btn-primary">Lihat</a>
+
+			<a href="{!! route('kategori_berita.edit',[$item->id]) !!}" class="btn btn-warning">Ubah</a>
+
+			{!! Form::open(['route' => ['kategori_berita.destroy', $item->id], 'method' => 'delete']) !!}
+
+			{!! Form::submit('Hapus',['class'=>'btn btn-sm btn-danger']); !!}
+
+			{!! Form::close() !!}
+		</td>
 		</tr>
 
 		@endforeach
