@@ -10,7 +10,11 @@
                 <div class="card-body">
                 	<a href="{!! route('pengumuman.create') !!}" class="btn btn-primary"> Tambah Data</a>
                    	<table border="1">
+<<<<<<< HEAD
 		<tr bgcolor="aqua">
+=======
+		<tr>
+>>>>>>> 2924708de52b48fac7e02a2c799fb68de35f0c40
 			<td><center> ID </center></td>
 			<td><center> Judul </center></td>
 			<td><center> Isi </center></td>
@@ -33,6 +37,7 @@
 			<td>{!! $item->kategori_pengumuman_id !!}</td>
 			<td>
 			<a href="{!! route('pengumuman.show',[$item->id]) !!}" class="btn btn-primary">Lihat</a>
+<<<<<<< HEAD
 
 			<a href="{!! route('pengumuman.edit',[$item->id]) !!}" class="btn btn-warning">Ubah</a>
 
@@ -41,6 +46,8 @@
 			{!! Form::submit('Hapus',['class'=>'btn btn-sm btn-danger']); !!}
 
 			{!! Form::close() !!}
+=======
+>>>>>>> 2924708de52b48fac7e02a2c799fb68de35f0c40
 		</td>
 		</tr>
 

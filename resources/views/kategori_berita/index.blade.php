@@ -29,6 +29,7 @@
 			<td>{!! $item->updated_at->format('d/m/Y H:i:s') !!}</td>
 			<td>
 			<a href="{!! route('kategori_berita.show',[$item->id]) !!}" class="btn btn-primary">Lihat</a>
+<<<<<<< HEAD
 
 			<a href="{!! route('kategori_berita.edit',[$item->id]) !!}" class="btn btn-warning">Ubah</a>
 
@@ -37,6 +38,8 @@
 			{!! Form::submit('Hapus',['class'=>'btn btn-sm btn-danger']); !!}
 
 			{!! Form::close() !!}
+=======
+>>>>>>> 2924708de52b48fac7e02a2c799fb68de35f0c40
 		</td>
 		</tr>
 

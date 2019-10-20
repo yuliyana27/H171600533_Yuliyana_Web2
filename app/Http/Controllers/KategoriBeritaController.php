@@ -24,6 +24,7 @@ class KategoriBeritaController extends Controller
 	return view ( 'kategori_berita.show',compact( 'KategoriBerita'));
 }
 
+<<<<<<< HEAD
 
 	public function create(){
 	return view( 'kategori_berita.create');
@@ -72,4 +73,18 @@ class KategoriBeritaController extends Controller
 	return redirect(route('kategori_berita.index'));
 }   
 
+=======
+public function create(){
+		return view( 'kategori_berita.create');
+	}
+
+		public function store(Request $request){
+		$input= $request->all();
+
+		KategoriBerita::create($input);
+
+		return redirect(route('kategori_berita.index'));
+
+	}
+>>>>>>> 2924708de52b48fac7e02a2c799fb68de35f0c40
 }

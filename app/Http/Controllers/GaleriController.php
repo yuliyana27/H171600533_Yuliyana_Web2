@@ -15,6 +15,35 @@ class GaleriController extends Controller
     //blade
     return view('galeri.index', compact('listGaleri'));
     //return view(view: 'galeri.index')->with('data',$listGaleri);
+<<<<<<< HEAD
+=======
+	}
+	public function show($id) {
+	//Eloquent
+	
+	$Galeri=Galeri::find($id);
+
+	return view ( 'galeri.show',compact( 'Galeri'));
+}
+
+	public function create(){
+
+		$KategoriGaleri= KategoriGaleri::pluck('nama','id');
+		
+
+
+		return view ('galeri.create', compact('KategoriGaleri'));
+
+	}
+	public function store(Request $request){
+		$input=$request->all();
+
+
+		Galeri::create($input);
+
+		return redirect(route ('galeri.index'));
+
+>>>>>>> 2924708de52b48fac7e02a2c799fb68de35f0c40
 	}
 	public function show($id) {
 	//Eloquent

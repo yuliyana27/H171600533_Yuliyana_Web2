@@ -16,11 +16,16 @@ class KategoriArtikelController extends Controller
     //return view(view: 'kategori_artikel.index')->with('data',$listKategoriArtikel);
 	}
 
+<<<<<<< HEAD
 	public function show($id) {
+=======
+public function show($id) {
+>>>>>>> 2924708de52b48fac7e02a2c799fb68de35f0c40
 	//Eloquent
 	//$KategoriArtikel=KategoriArtikel::('id','$id')->first(); // select * from Kategori artikel where id=$id limit 1
 	$KategoriArtikel=KategoriArtikel::find($id);
 
+<<<<<<< HEAD
 			if(empty($KategoriArtikel)){
 			return redirect(route('kategori_artikel.index'));
 	}	
@@ -85,4 +90,21 @@ class KategoriArtikelController extends Controller
 
 }
 
+=======
+	return view ( 'kategori_artikel.show',compact( 'KategoriArtikel'));
+>>>>>>> 2924708de52b48fac7e02a2c799fb68de35f0c40
+}
+
+	public function create(){
+		return view( 'kategori_artikel.create');
+	}
+
+		public function store(Request $request){
+		$input= $request->all();
+
+		KategoriArtikel::create($input);
+
+		return redirect(route('kategori_artikel.index'));
+
+	}
 }

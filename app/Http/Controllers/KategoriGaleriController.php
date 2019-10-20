@@ -35,6 +35,7 @@ public function create(){
 
 		return redirect(route('kategori_galeri.index'));
 
+<<<<<<< HEAD
 	}
 	public function edit($id){
 	$KategoriGaleri=KategoriGaleri::find($id);
@@ -43,6 +44,8 @@ public function create(){
 
 	if(empty($KategoriGaleri)){
 	return redirect(route('kategori_galeri.index'));
+=======
+>>>>>>> 2924708de52b48fac7e02a2c799fb68de35f0c40
 	}
 
 		return view('kategori_galeri.edit', compact('KategoriGaleri'));

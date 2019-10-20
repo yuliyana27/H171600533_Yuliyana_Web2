@@ -15,6 +15,35 @@ class BeritaController extends Controller
     //blade
     return view('berita.index', compact('listBerita'));
     //return view(view: 'berita.index')->with('data',$listBerita);
+<<<<<<< HEAD
+=======
+	}
+	public function show($id) {
+	//Eloquent
+	
+	$Berita=Berita::find($id);
+
+	return view ( 'berita.show',compact( 'Berita'));
+}
+
+	public function create(){
+
+		$KategoriBerita= KategoriBerita::pluck('nama','id');
+		
+
+
+		return view ('berita.create', compact('KategoriBerita'));
+
+	}
+	public function store(Request $request){
+		$input=$request->all();
+
+
+		Berita::create($input);
+
+		return redirect(route ('berita.index'));
+
+>>>>>>> 2924708de52b48fac7e02a2c799fb68de35f0c40
 	}
 	public function show($id) {
 	//Eloquent

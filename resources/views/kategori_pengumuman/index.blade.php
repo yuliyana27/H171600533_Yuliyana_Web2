@@ -10,7 +10,11 @@
                 <div class="card-body">
                 	<a href="{!! route('kategori_pengumuman.create') !!}" class="btn btn-primary">Tambah Data</a>
                    <table border="1">
+<<<<<<< HEAD
 		<tr bgcolor="aqua">
+=======
+		<tr>
+>>>>>>> 2924708de52b48fac7e02a2c799fb68de35f0c40
 			<td><center> ID </center></td>
 			<td><center> Nama </center></td>
 			<td><center> Users Id </center></td>
@@ -29,6 +33,7 @@
 			<td>{!! $item->updated_at->format('d/m/Y H:i:s') !!}</td>
 			<td>
 			<a href="{!! route('kategori_pengumuman.show',[$item->id]) !!}" class="btn btn-primary">Lihat</a>
+<<<<<<< HEAD
 
 			<a href="{!! route('kategori_pengumuman.edit',[$item->id]) !!}" class="btn btn-warning">Ubah</a>
 
@@ -37,6 +42,8 @@
 			{!! Form::submit('Hapus',['class'=>'btn btn-sm btn-danger']); !!}
 
 			{!! Form::close() !!}
+=======
+>>>>>>> 2924708de52b48fac7e02a2c799fb68de35f0c40
 		</td>
 		</tr>
 

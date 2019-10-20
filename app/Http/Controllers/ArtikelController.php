@@ -42,6 +42,7 @@ class ArtikelController extends Controller
 		return redirect(route ('artikel.index'));
 
 	}
+<<<<<<< HEAD
 	public function edit($id){
 	$Artikel=Artikel::find($id);
 	$KategoriArtikel=KategoriArtikel::pluck('nama','id');
@@ -79,4 +80,6 @@ class ArtikelController extends Controller
 	return redirect(route('artikel.index'));
 }
 
+=======
+>>>>>>> 2924708de52b48fac7e02a2c799fb68de35f0c40
 }

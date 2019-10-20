@@ -36,6 +36,7 @@ public function create(){
 		return redirect(route('kategori_pengumuman.index'));
 
 	}
+<<<<<<< HEAD
 	public function edit($id){
 	$KategoriPengumuman=KategoriPengumuman::find($id);
 
@@ -72,4 +73,6 @@ public function create(){
 	return redirect(route('kategori_pengumuman.index'));
 }   
 
+=======
+>>>>>>> 2924708de52b48fac7e02a2c799fb68de35f0c40
 }
